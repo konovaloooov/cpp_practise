@@ -1,0 +1,1 @@
+These are my home practical work on the C++ programming course at the Faculty of CSIT direction FCSaIT :)
