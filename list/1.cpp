@@ -75,7 +75,16 @@ void result(list *&h, list *&t) {
         p = p->next;
     }
 }
-
+void del_list(list* &h) {
+    list* cur = h;
+    list* next;
+    while (cur != NULL) {
+        next = cur->next;
+        delete cur;
+        cur = next;
+    }
+    h = NULL;
+}
 int main(){
     int n, y;
     //инициализируем список
@@ -91,5 +100,6 @@ int main(){
     result(h, t);
     cout << "result: ";
     print(h, t);//выводим полученный список
+    del_list(h);
     return 0;
 }
